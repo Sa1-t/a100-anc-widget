@@ -11,6 +11,7 @@ import android.content.pm.PackageManager
 import android.os.Build
 import android.os.Bundle
 import android.widget.Button
+import android.widget.TextView
 import android.widget.Toast
 
 /** Shared device selection for initial setup and pinning, plus local widget settings. */
@@ -29,6 +30,12 @@ class MainActivity : Activity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        try {
+            val info = packageManager.getPackageInfo(packageName, 0)
+            findViewById<TextView>(R.id.version_label).text = "版本 ${info.versionName}"
+        } catch (_: Exception) {
+            // Keep the layout default if the package info cannot be read.
+        }
         findViewById<Button>(R.id.btn_add_widget).setOnClickListener { addWidget() }
         WidgetSettingsUi.bind(this)
         controls = DeviceControlsUi(this)

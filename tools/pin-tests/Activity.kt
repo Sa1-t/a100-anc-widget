@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.widget.Button
 open class Activity : Context() {
     val button = Button()
+    val label = android.widget.TextView()
     var requested: Array<String>? = null
     var requestCode = 0
     open fun onCreate(savedInstanceState: Bundle?) {}
@@ -12,7 +13,7 @@ open class Activity : Context() {
     open fun onRequestPermissionsResult(code: Int, permissions: Array<out String>, grants: IntArray) {}
     fun setContentView(layout: Int) {}
     @Suppress("UNCHECKED_CAST")
-    fun <T> findViewById(id: Int): T = button as T
+    fun <T> findViewById(id: Int): T = if (id == 3) label as T else button as T
     fun requestPermissions(permissions: Array<String>, code: Int) {
         requested = permissions; requestCode = code
     }

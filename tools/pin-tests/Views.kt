@@ -5,6 +5,9 @@ class Button {
     fun setOnClickListener(value: (Any?) -> Unit) { listener = value }
     fun click() = listener(null)
 }
+class TextView {
+    var text: String = ""
+}
 class Toast(private val text: String) {
     companion object {
         const val LENGTH_LONG = 1

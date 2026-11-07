@@ -37,5 +37,8 @@
             android:layout_marginTop="16dp" android:text="點小工具切換模式" android:checked="true" />
         <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
             android:text="關閉後點小工具不會切換模式；電量刷新與單聲道仍可使用。" />
+        <TextView android:id="@+id/version_label" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginTop="24dp"
+            android:gravity="center" android:text="版本 1.0.0" android:textSize="12sp" />
     </LinearLayout>
 </ScrollView>

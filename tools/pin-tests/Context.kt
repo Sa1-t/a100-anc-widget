@@ -2,6 +2,8 @@ package android.content
 open class Context {
     companion object { const val MODE_PRIVATE = 0; const val BLUETOOTH_SERVICE = "bluetooth" }
     val prefs = SharedPreferences()
+    val packageName: String = "com.alpha.ancwidget"
+    val packageManager = PackageManager()
     var service: Any? = null
     var connectGranted = true
     fun getSharedPreferences(name: String, mode: Int) = prefs
@@ -12,7 +14,10 @@ open class Context {
     }
 }
 class ComponentName(context: Context, cls: Class<*>)
-class SharedPreferences {
+class PackageInfo { var versionName: String = "1.0.0" }
+class PackageManager {
+    fun getPackageInfo(packageName: String, flags: Int) = PackageInfo()
+}class SharedPreferences {
     val values = mutableMapOf<String, Any>()
     fun getInt(key: String, default: Int) = values[key] as? Int ?: default
     fun getLong(key: String, default: Long) = values[key] as? Long ?: default
