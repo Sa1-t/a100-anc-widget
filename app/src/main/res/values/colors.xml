@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <color name="widget_surface">#CC191C22</color>
+    <color name="widget_surface_opaque">#191C22</color>
+    <color name="widget_track">#363C46</color>
+    <color name="widget_icon">#E3E7ED</color>
+    <color name="widget_label">#C3CAD3</color>
+    <color name="widget_caption">#A3ACB9</color>
+    <color name="widget_battery_green">#65CC88</color>
+    <color name="widget_battery_amber">#E8BC60</color>
+    <color name="widget_battery_red">#EE7B82</color>
+    <color name="widget_battery_unknown">#697381</color>
+    <color name="widget_mode_normal">#D3D9E2</color>
+    <color name="widget_mode_anc">#8DBBFA</color>
+    <color name="widget_mode_transparency">#78D2BD</color>
+    <color name="widget_mode_normal_surface">#242931</color>
+    <color name="widget_mode_anc_surface">#202D3E</color>
+    <color name="widget_mode_transparency_surface">#20342F</color>
+</resources>

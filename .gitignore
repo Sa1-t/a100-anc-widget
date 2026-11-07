@@ -1,0 +1,8 @@
+android-sdk/
+jdk17/
+gradle-dist/
+app/build/
+*.apk
+local.properties
+*.log
+.gradle/

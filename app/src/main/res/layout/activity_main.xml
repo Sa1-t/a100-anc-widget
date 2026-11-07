@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:fillViewport="true">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:padding="24dp">
+        <Button android:id="@+id/btn_add_widget" style="@style/PillButton"
+            android:layout_width="match_parent" android:layout_height="56dp"
+            android:text="加入到桌面" />
+        <LinearLayout android:id="@+id/device_controls" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginTop="24dp"
+            android:orientation="vertical" />
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="24dp" android:text="圓環顏色"
+            android:textSize="20sp" android:textStyle="bold" />
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="4dp" android:text="每排可左右滑動選色，或以「自訂」輸入 Hex 色碼；✓ 為目前選色。" />
+        <LinearLayout android:id="@+id/ring_colors" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:orientation="vertical" />
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="24dp" android:text="小尺寸顯示內容" android:textSize="20sp"
+            android:textStyle="bold" />
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="各尺寸共用設定，兩格可重複選取。2×1 由左至右、1×2 由上至下；2×2 維持四格。" />
+        <LinearLayout android:id="@+id/compact_contents" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:orientation="vertical" />
+        <TextView android:id="@+id/opacity_label" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginTop="24dp"
+            android:text="卡片不透明度：80%" android:textSize="18sp" />
+        <SeekBar android:id="@+id/card_opacity" android:layout_width="match_parent"
+            android:layout_height="48dp" android:max="60" android:progress="40"
+            android:contentDescription="卡片不透明度，40% 至 100%" />
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="40% 較透明 · 100% 不透明；桌面支援時，半透明卡片會呈現模糊效果。" />
+        <Switch android:id="@+id/mode_switch_enabled" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:minHeight="56dp"
+            android:layout_marginTop="16dp" android:text="點小工具切換模式" android:checked="true" />
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="關閉後點小工具不會切換模式；電量刷新與單聲道仍可使用。" />
+    </LinearLayout>
+</ScrollView>
